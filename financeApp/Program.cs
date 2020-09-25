@@ -70,14 +70,14 @@ namespace financeApp
 
         private static void Load_balance()
         {
-            if (!File.Exists("Z:\\balance.txt"))
+            if (!File.Exists("C:\\balance.txt"))
             {
-                StreamWriter sw = new StreamWriter("Z:\\balance.txt");
+                StreamWriter sw = new StreamWriter("C:\\balance.txt");
                 //sw.WriteLine("This is still running");
                 sw.Close();
             }
 
-            StreamReader sr = new StreamReader("Z:\\balance.txt");
+            StreamReader sr = new StreamReader("C:\\balance.txt");
             string prevBalstr = sr.ReadLine();
 
             while (prevBalstr != null)
@@ -92,9 +92,9 @@ namespace financeApp
 
         private static void Save_balance()
         {
-            if (File.Exists("Z:\\balance.txt"))
+            if (File.Exists("C:\\balance.txt"))
             {
-                StreamWriter bal = new StreamWriter("Z:\\balance.txt");
+                StreamWriter bal = new StreamWriter("C:\\balance.txt");
                 bal.WriteLine(accBalance);
                 bal.Close();
             }
